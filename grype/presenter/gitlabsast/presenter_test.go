@@ -178,7 +178,7 @@ func TestGitlabSASTImgsPresenter(t *testing.T) {
 	// validateAgainstV1Schema(t, string(actual))
 }
 
-func TestEmptyJsonPresenter(t *testing.T) {
+func TestEmptyGitlabSASTPresenter(t *testing.T) {
 	// Expected to have an empty JSON array back
 	var buffer bytes.Buffer
 
