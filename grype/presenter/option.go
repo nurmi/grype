@@ -7,6 +7,7 @@ const (
 	JSONPresenter
 	TablePresenter
 	CycloneDxPresenter
+	GitlabSASTPresenter
 )
 
 var optionStr = []string{
@@ -14,12 +15,14 @@ var optionStr = []string{
 	"json",
 	"table",
 	"cyclonedx",
+	"gitlabsast",	
 }
 
 var Options = []Option{
 	JSONPresenter,
 	TablePresenter,
 	CycloneDxPresenter,
+	GitlabSASTPresenter,
 }
 
 type Option int
@@ -32,6 +35,8 @@ func ParseOption(userStr string) Option {
 		return TablePresenter
 	case strings.ToLower(CycloneDxPresenter.String()):
 		return CycloneDxPresenter
+	case strings.ToLower(GitlabSASTPresenter.String()):
+		return GitlabSASTPresenter		
 	default:
 		return UnknownPresenter
 	}

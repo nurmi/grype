@@ -1,0 +1,102 @@
+{
+ "version": "2.3",
+ "vulnerabilities": [
+  {
+   "cve": "sha256:2731251dc34951c0e50fcc643b4c5f74922dad1a5d98f302b504cf46cd5d9368:package-1-1.1.1:CVE-1999-0001",
+   "category": "container_scanning",
+   "message": "CVE-1999-0001 in package-1-1.1.1",
+   "description": "1999-01 description",
+   "severity": "Info",
+   "confidence": "Unknown",
+   "solution": "Unknown",
+   "scanner": {
+    "id": "anchore-grype",
+    "name": "anchore-grype"
+   },
+   "location": {
+    "dependency": {
+     "package": {
+      "name": "package-1"
+     },
+     "version": "1.1.1"
+    },
+    "operating_system": "Unknown",
+    "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
+   },
+   "identifiers": [
+    {
+     "type": "cve",
+     "name": "CVE-1999-0001",
+     "value": "CVE-1999-0001",
+     "url": ""
+    }
+   ],
+   "links": []
+  },
+  {
+   "cve": "sha256:2731251dc34951c0e50fcc643b4c5f74922dad1a5d98f302b504cf46cd5d9368:package-1-1.1.1:CVE-1999-0002",
+   "category": "container_scanning",
+   "message": "CVE-1999-0002 in package-1-1.1.1",
+   "description": "1999-02 description",
+   "severity": "Info",
+   "confidence": "Unknown",
+   "solution": "Unknown",
+   "scanner": {
+    "id": "anchore-grype",
+    "name": "anchore-grype"
+   },
+   "location": {
+    "dependency": {
+     "package": {
+      "name": "package-1"
+     },
+     "version": "1.1.1"
+    },
+    "operating_system": "Unknown",
+    "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
+   },
+   "identifiers": [
+    {
+     "type": "cve",
+     "name": "CVE-1999-0002",
+     "value": "CVE-1999-0002",
+     "url": ""
+    }
+   ],
+   "links": []
+  },
+  {
+   "cve": "sha256:2731251dc34951c0e50fcc643b4c5f74922dad1a5d98f302b504cf46cd5d9368:package-1-1.1.1:CVE-1999-0003",
+   "category": "container_scanning",
+   "message": "CVE-1999-0003 in package-1-1.1.1",
+   "description": "1999-03 description",
+   "severity": "Info",
+   "confidence": "Unknown",
+   "solution": "Unknown",
+   "scanner": {
+    "id": "anchore-grype",
+    "name": "anchore-grype"
+   },
+   "location": {
+    "dependency": {
+     "package": {
+      "name": "package-1"
+     },
+     "version": "1.1.1"
+    },
+    "operating_system": "Unknown",
+    "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
+   },
+   "identifiers": [
+    {
+     "type": "cve",
+     "name": "CVE-1999-0003",
+     "value": "CVE-1999-0003",
+     "url": ""
+    }
+   ],
+   "links": []
+  }
+ ],
+ "remediations": []
+}

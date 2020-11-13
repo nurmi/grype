@@ -10,6 +10,7 @@ import (
 
 	"github.com/anchore/grype/grype/presenter/cyclonedx"
 	"github.com/anchore/grype/grype/presenter/json"
+	"github.com/anchore/grype/grype/presenter/gitlabsast"	
 	"github.com/anchore/grype/grype/presenter/table"
 	"github.com/anchore/syft/syft/pkg"
 )
@@ -28,6 +29,8 @@ func GetPresenter(option Option, results match.Matches, catalog *pkg.Catalog, th
 		return table.NewPresenter(results, catalog, metadataProvider)
 	case CycloneDxPresenter:
 		return cyclonedx.NewPresenter(results, catalog, theScope, metadataProvider)
+	case GitlabSASTPresenter:
+		return gitlabsast.NewPresenter(results, catalog, theScope, metadataProvider)		
 	default:
 		return nil
 	}
