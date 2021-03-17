@@ -15,7 +15,7 @@ var optionStr = []string{
 	"json",
 	"table",
 	"cyclonedx",
-	"gitlabsast",	
+	"gitlabsast",
 }
 
 var Options = []Option{
@@ -36,7 +36,7 @@ func ParseOption(userStr string) Option {
 	case strings.ToLower(CycloneDxPresenter.String()):
 		return CycloneDxPresenter
 	case strings.ToLower(GitlabSASTPresenter.String()):
-		return GitlabSASTPresenter		
+		return GitlabSASTPresenter
 	default:
 		return UnknownPresenter
 	}

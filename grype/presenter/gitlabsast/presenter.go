@@ -7,6 +7,7 @@ import (
 	"github.com/anchore/grype/grype/match"
 
 	"github.com/anchore/grype/grype/vulnerability"
+	"github.com/anchore/syft/syft/distro"
 	"github.com/anchore/syft/syft/pkg"
 	"github.com/anchore/syft/syft/scope"
 )
@@ -17,21 +18,23 @@ type Presenter struct {
 	catalog          *pkg.Catalog
 	scope            scope.Scope
 	metadataProvider vulnerability.MetadataProvider
+	distro           *distro.Distro
 }
 
 // NewPresenter is a *Presenter constructor
-func NewPresenter(matches match.Matches, catalog *pkg.Catalog, theScope scope.Scope, metadataProvider vulnerability.MetadataProvider) *Presenter {
+func NewPresenter(matches match.Matches, catalog *pkg.Catalog, theScope scope.Scope, metadataProvider vulnerability.MetadataProvider, d *distro.Distro) *Presenter {
 	return &Presenter{
 		matches:          matches,
 		catalog:          catalog,
 		metadataProvider: metadataProvider,
 		scope:            theScope,
+		distro:           d,
 	}
 }
 
 // Present creates a JSON-based reporting
 func (pres *Presenter) Present(output io.Writer) error {
-	doc, err := NewDocument(pres.catalog, pres.scope, pres.matches, pres.metadataProvider)
+	doc, err := NewDocument(pres.catalog, pres.scope, pres.matches, pres.metadataProvider, pres.distro)
 	if err != nil {
 		return err
 	}

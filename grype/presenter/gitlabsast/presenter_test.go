@@ -10,6 +10,7 @@ import (
 	"github.com/anchore/grype/grype/vulnerability"
 	"github.com/anchore/stereoscope/pkg/file"
 	"github.com/anchore/stereoscope/pkg/imagetest"
+	"github.com/anchore/syft/syft/distro"
 	"github.com/anchore/syft/syft/pkg"
 	"github.com/anchore/syft/syft/scope"
 	"github.com/sergi/go-diff/diffmatchpatch"
@@ -153,7 +154,12 @@ func TestGitlabSASTImgsPresenter(t *testing.T) {
 		t.Fatalf("failed to create scope: %+v", err)
 	}
 
-	pres := NewPresenter(matches, catalog, theScope, newMetadataMock())
+	theDistro, err := distro.NewDistro(distro.IDMapping["alpine"], "3.6.5", "")
+	if err != nil {
+		t.Fatalf("failed to create distro: %+v", err)
+	}
+
+	pres := NewPresenter(matches, catalog, theScope, newMetadataMock(), &theDistro)
 
 	// TODO: add a constructor for a match.Match when the data is better shaped
 
@@ -199,7 +205,7 @@ func TestEmptyGitlabSASTPresenter(t *testing.T) {
 		t.Fatalf("failed to create scope: %+v", err)
 	}
 
-	pres := NewPresenter(matches, catalog, theScope, nil)
+	pres := NewPresenter(matches, catalog, theScope, nil, nil)
 
 	// run presenter
 	if err = pres.Present(&buffer); err != nil {

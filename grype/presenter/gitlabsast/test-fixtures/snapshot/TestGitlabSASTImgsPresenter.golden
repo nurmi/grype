@@ -20,7 +20,7 @@
      },
      "version": "1.1.1"
     },
-    "operating_system": "Unknown",
+    "operating_system": "alpine:3.6.5",
     "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
    },
    "identifiers": [
@@ -52,7 +52,7 @@
      },
      "version": "1.1.1"
     },
-    "operating_system": "Unknown",
+    "operating_system": "alpine:3.6.5",
     "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
    },
    "identifiers": [
@@ -84,7 +84,7 @@
      },
      "version": "1.1.1"
     },
-    "operating_system": "Unknown",
+    "operating_system": "alpine:3.6.5",
     "image": "stereoscope-fixture-image-simple:04e16e44161c8888a1a963720fd0443cbf7eef8101434c431de8725cd98cc9f7"
    },
    "identifiers": [
